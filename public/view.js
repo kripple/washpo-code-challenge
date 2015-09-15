@@ -7,13 +7,14 @@ View.prototype.handleSubmit = function() {
   $('#title-input').keyup(function(e) {
     e.preventDefault();
     var title = $("#title-input").val();
-    self.ctrl.search(title)
+    self.ctrl.search(title);
   });
 };
 
 View.prototype.displayMovie = function(movie) {
   var html = "<p>Title:" + movie.title + "</p>";
   html += "<p>Year:" + movie.year + "</p>";
+  html += "<img src="+movie.imgSrc+"/>";
   $("#results").html(html);
 };
 
