@@ -4,7 +4,7 @@ function View() {
 
 View.prototype.handleSubmit = function() {
   var self = this;
-  $(document).on('submit', '#search-form', function(e) {
+  $('#title-input').keyup(function(e) {
     e.preventDefault();
     var title = $("#title-input").val();
     self.ctrl.search(title)
