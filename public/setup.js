@@ -1,6 +1,14 @@
-$(document).ready( function() {
-  $.ajax('http://www.omdbapi.com/?')
-    .done( function(response) {
-      console.log(response)
-    });
+$(document).ready(function() {
+  var view = new View(document);
+  var ctrl = new Controller(view);
+  view.ctrl = ctrl;
+  view.handleSubmit();
 });
+
+
+
+
+
+
+
+
