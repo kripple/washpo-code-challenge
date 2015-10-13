@@ -1,1 +1,2 @@
-# washpo-code-challenge
+# The Washington Post Front-End Coding Challenge
+
