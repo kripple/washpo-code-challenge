@@ -1,6 +1,6 @@
-# The Washington Post Front-End Coding Challenge
+# WashPo Coding Challenge
 
-### Quick Start 
+### Usage Instructions
 
 From the home directory, run:
 
