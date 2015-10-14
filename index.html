@@ -3,17 +3,24 @@
 
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script type="text/javascript" src="main.js"></script>
-  <link rel="stylesheet" type="text/css" href="default.css">
+  <script type="text/javascript" src="javascripts/helpers.js"></script>
+  <script type="text/javascript" src="javascripts/question.js"></script>
+  <script type="text/javascript" src="javascripts/answer.js"></script>
+  <script type="text/javascript" src="javascripts/search.js"></script>
+  <script type="text/javascript" src="javascripts/main.js"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
   <link rel="shortcut icon" href="imgs/favicon.ico" />
-  <title>Search StackEx</title>
+  <title>StackExchange</title>
 </head>
 
 <body>
-  <header>Header ....</header>
+  <header>Search Stack Exchange by Title</header>
   <main>
-    <input id="title-input" type="text"></input>
-    <div id="results"></div>
+    <div class="container">
+      <input id="title-input" type="text"></input>
+      <button id="search">Search</button>
+      <div id="results"></div>
+    </div>
   </main>
 </body>
 
