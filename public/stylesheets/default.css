@@ -32,7 +32,7 @@ button#search {
 }
 
 button#search:hover {
-	background-color: gray;
+	background-color: #CCCCCC;
 }
 
 div#results {
@@ -51,6 +51,8 @@ div.question-container h1 {
 }
 
 div.question-body {
+	padding: 0 10px 0 10px;
+	margin: 5px 5px 10px 5px;
 	min-width: 250px;
 	max-width: 750px;
 }
@@ -60,11 +62,15 @@ div.answer-container {
 	margin: 5px 5px 10px 5px;
 	min-width: 250px;
 	max-width: 750px;
-	border-left: 1px solid black;
+	border: 1px solid black;
+}
+
+div.accepted-answer {
+	border: 2px solid #00FF00;
+	background-color: #F2F2F2;
 }
 
 code {
-	display: inline-block;
 	word-wrap: break-word;
 	min-width: 250px;
 	max-width: 750px;

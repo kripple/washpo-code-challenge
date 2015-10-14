@@ -19,7 +19,7 @@ function initAnswers() {
 };
 
 function showQuestion(id, container) {
-	url = "http://api.stackexchange.com/2.2/questions/" + id + "?order=desc&sort=activity&site=stackoverflow&filter=withbody"
+	url = "http://api.stackexchange.com/2.2/questions/" + id + "?order=desc&sort=activity&site=stackoverflow&filter=withbody&key=Z12ThRgZNVxP1Ob7w9Ogng(("
 
 	$.ajax(url).done(function(data) {
 		var question = data["items"][0];
@@ -29,7 +29,7 @@ function showQuestion(id, container) {
 		text += question.body;
 		text += "</div>";
 		container.append(text);
-		answerURL = "http://api.stackexchange.com/2.2/questions/" + id + "/answers?order=desc&sort=activity&site=stackoverflow&filter=withbody";
+		answerURL = "http://api.stackexchange.com/2.2/questions/" + id + "/answers?order=desc&sort=activity&site=stackoverflow&filter=withbody&key=Z12ThRgZNVxP1Ob7w9Ogng((";
 		getAnswers(container,answerURL);
 
 	}).fail(function(jqXHR, textStatus, errorThrown) {
@@ -64,8 +64,20 @@ function getAnswers(container,url) {
 
 function answerHTML(answer) {
 	var text = '';
-	text += "<div class='answer-container'>";
+	if (answer.is_accepted == true) {
+		text += "<div class='answer-container accepted-answer'>";
+	} else {
+		text += "<div class='answer-container'>";
+	};	
 	text += answer.body;
 	text += "</div>";
 	return text;
 };
+
+
+
+
+
+
+
+
